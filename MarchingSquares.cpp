@@ -17,20 +17,18 @@ MarchingSquares::~MarchingSquares()
 
 void MarchingSquares::update()
 {
-  float yOffset = 0;
+  float y = 0;
   for (int i = 0; i < this->row; i++)
   {
-    yOffset += 0.01f;
-    float xOffset = 0;
+    y += this->increment;
+    float x = 0;
     for (int j = 0; j < this->col; j++)
     {
-      xOffset += 0.01f;
-      float noise = (float)this->perlin.noise3D_01(j + xOffset, i + yOffset, this->zCounter);
+      x += this->increment;
+      float noise = (float)this->perlin.noise3D_01(x, y, GetTime());
       field[i][j] = noise;
     }
   }
-
-  this->zCounter += 0.0001f;
 }
 
 void MarchingSquares::draw()

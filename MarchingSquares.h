@@ -17,11 +17,11 @@ private:
 
 	const int width = 800;
 	const int height = 600;
-	const int res = 20;
+	const int res = 10;
 	const int col = width / res + 1;
 	const int row = height / res + 1;
 	float threshold = 0.5f;
-	float zCounter = 0.1f;
+	float increment = 0.1f;
 
 	std::vector<std::vector<float>> field;
 	siv::PerlinNoise perlin;
