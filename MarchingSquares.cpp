@@ -33,6 +33,17 @@ void MarchingSquares::update()
 
 void MarchingSquares::draw()
 {
+   // Draw perlin noise
+   // for (int i = 0; i < this->row; i++)
+   // {
+   //   for (int j = 0; j < this->col; j++)
+   //   {
+   //     unsigned char value = field[i][j] * 255;
+   //     Color color = { .r = value, .g = value, .b = value, .a = 255 };
+   //     DrawRectangle(j * this->res, i * this->res, this->res, this->res, color);
+   //   }
+   // }
+
   for (int i = 0; i < this->row - 1; i++)
   {
     for (int j = 0; j < this->col - 1; j++)
